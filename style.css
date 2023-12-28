@@ -1,0 +1,35 @@
+<style>
+    /* Стили для мобильной кнопки */
+    #mobileToggleButton {
+        background-color: #4CAF50; /* Зеленый цвет */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px; /* Круглые углы */
+    }
+
+    /* Стили для кнопки PC */
+    #desktopToggleButton {
+        background-color: #008CBA; /* Синий цвет */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px; /* Круглые углы */
+    }
+</style>
+
+<button id="mobileToggleButton">MOBILE</button>
+
+<button id="desktopToggleButton">PC</button>

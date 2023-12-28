@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>кт4</title>
+
+    <style>
+
+        body {
+
+            background-color: #6dadbf;
+
+        }
+
+        header {
+
+            background-color: #f0e9e9;
+
+            color: #3f3b3b;
+
+            text-align: left;
+
+            padding: 20px;
+
+        }
+
+
+
+        footer {
+
+            background-color: #f2eaea;
+
+            color: #625959;
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+
+
+        .container {
+
+            max-width: 500px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+
+            padding: 20px;
+
+        }
+
+
+
+        .block {
+
+            border-top-left-radius: 10px;
+
+            border-bottom-right-radius: 10px;
+
+            background-color: #f2f2f2;
+
+            text-align: left;
+
+            padding: 20px;
+
+            padding: 5px;
+
+            border-width: 10px;
+
+        }
+
+
+
+        .block h2 {
+
+            color: #46c0ad;
+
+            font-weight: bold;
+
+            text-align: left;
+
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+        .mobile-view .container {
+
+grid-template-columns: 1fr;
+
+}
+</style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Logo</h1>
+
+        <button id="mobileToggleButton">MOBILE</button>
+        <style>
+            /* Стили для мобильной кнопки */
+            #mobileToggleButton {
+                background-color: #4CAF50; /* Зеленый цвет */
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px; /* Круглые углы */
+            }
+       
+            /* Стили для кнопки PC */
+            #desktopToggleButton {
+                background-color: #008CBA; /* Синий цвет */
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px; /* Круглые углы */
+            }
+        </style>
+       
+       
+       
+        <button id="desktopToggleButton">PC</button>
+       
+       
+
+       
+
+       
+
+    </header>
+
+   
+
+    <div class="container">
+
+       
+
+        <div class="block">
+
+            <h2>01</h2>
+
+            <div class="block">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+        </div>
+
+        <div class="block">
+
+            <h2>02</h2>
+
+            <div class="block">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+        </div>
+
+        <div class="block">
+
+            <h2>03</h2>
+
+            <div class="block">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+        </div>
+
+        <div class="block">
+
+            <h2>04</h2>
+
+            <div class="block">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+        </div>
+
+        <div class="block">
+
+            <h2>05</h2>
+
+            <div class="block">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+        </div>
+
+        <div class="block">
+
+            <h2>06</h2>
+
+            <div class="block">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+
+    </footer>
+
+    <script>
+
+        // Получаем ссылки на кнопку и на контейнер .container
+
+        const mobileToggleButton = document.getElementById("mobileToggleButton");
+
+        const desktopToggleButton = document.getElementById("desktopToggleButton");
+
+        const container = document.querySelector(".container");
+
+   
+
+        // Обработчик события для кнопки "Мобильная адаптация"
+
+        mobileToggleButton.addEventListener("click", function () {
+
+            // Проверяем, видима ли кнопка "Мобильная адаптация" на данный момент
+
+            const isButtonVisible = window.getComputedStyle(mobileToggleButton).display !== "none";
+
+   
+
+            // Если кнопка "Мобильная адаптация" видима, то скрываем блоки .container на мобильных устройствах
+
+            if (isButtonVisible) {
+
+                container.style.gridTemplateColumns = "1fr"; // Устанавливаем одну колонку на мобильную адаптацию
+
+            } else {
+
+                // Если кнопка "Мобильная адаптация" скрыта, то восстанавливаем оригинальные стили блоков
+
+                container.style.gridTemplateColumns = "repeat(2, 1fr)";
+
+            }
+
+        });
+
+   
+
+        // Обработчик события для кнопки "Десктопная адаптация"
+
+        desktopToggleButton.addEventListener("click", function () {
+
+            container.style.gridTemplateColumns = "repeat(2, 1fr)"; // Восстанавливаем оригинальные стили блоков
+
+        });
+
+    </script>
+
+   
+
+</body>
+
+</html>
